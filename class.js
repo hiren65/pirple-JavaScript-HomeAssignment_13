@@ -31,14 +31,8 @@ It should have another method called "Stop" that sets the value of isDriving to 
 class Cars extends Vehicle {
 
     constructor(make,model,year,weight) {
-        super(Vehicle);
-        this.make = make;
-        this.model = model;
-        this.year = year;
-        this.weight = weight;
+        super(make,model,year,weight);
         this.isDriving = false;
-        this.tripsSinceMaintenance = 0;
-        this.NeedsMaintenance = false;
     }
 
     drive() {
@@ -109,14 +103,8 @@ printed saying that the plane can't fly until it's repaired.
 
 class Planes extends Vehicle{
     constructor(make,model,year,weight){
-        super(Vehicle);
-        this.make = make;
-        this.model = model;
-        this.year = year;
-        this.weight = weight;
-        this.NeedsMaintenance = false;
+        super(make,model,year,weight);
         this.isFlying = false;
-        this.tripsSinceMaintenance = 0;
     }
     flying(){
         if (this.tripsSinceMaintenance === 100){
